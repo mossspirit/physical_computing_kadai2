@@ -2,10 +2,7 @@
 using System.IO.Ports;
 using UnityEngine;
 using UniRx;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using UnityEngine;
 
 public class SerialMain : MonoBehaviour {
 
@@ -16,10 +13,11 @@ public class SerialMain : MonoBehaviour {
     public bool isLoop = true;
     [SerializeField] PlayerManager playerManager;
     string str;
+    GameManager game;
 
     void Start() {
         this.serial = new SerialPort(portName, baurate, Parity.None, 8, StopBits.One);
-
+        game = GetComponent<GameManager>();
         try {
             this.serial.Open();
             Scheduler.ThreadPool.Schedule(() => ReadData()).AddTo(this);
@@ -28,21 +26,34 @@ public class SerialMain : MonoBehaviour {
         }
     }
     void Update() {
-        if (str == "Run") {
-            playerManager.Run();
-            str = "";
-        }else if (str == "TurnLeft") {
-            playerManager.TurnLeft();
-            str = "";
-        }else if (str == "TurnRight") {
-            playerManager.TurnRight();
-            str = "";
-        } else {
+        if(SceneManager.GetActiveScene().name == "Main") {
+            if (str == "Run") {
+                playerManager.Run();
+                str = "";
+            } else if (str == "TurnLeft") {
+                playerManager.TurnLeft();
+                str = "";
+            } else if (str == "TurnRight") {
+                playerManager.TurnRight();
+                str = "";
+            } else {
 
-        }
-        if (str == "Light") {
-            playerManager.HandLight();
-            str = "";
+            }
+            if (str == "Light") {
+                playerManager.HandLight();
+                str = "";
+                if (game.isGame) {
+                    SceneManager.LoadScene("Title");
+                    Scene();
+                    str = "";
+                }
+            }
+        } else {
+            if (str == "Light") {
+                SceneManager.LoadScene("Main");
+                Scene();
+                str = "";
+            }
         }
     }
 

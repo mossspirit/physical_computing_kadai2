@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] Text gameTimerText;
     [SerializeField] GameObject gameClearText;
     [SerializeField] GameObject gameOverText;
-    bool isGame = false;
+    public bool isGame = false;
     // Use this for initialization
     void Start () {
 		
