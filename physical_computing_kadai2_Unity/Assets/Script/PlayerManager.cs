@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour {
     [SerializeField] GameObject handLight;
     [SerializeField] int speed = 3;
     [SerializeField] float MaxLightTime = 10;
+    [SerializeField] GameObject yazirusi;
     GameManager gameManager;
     SerialMain serialMain;
     Animator anim;
@@ -19,6 +20,9 @@ public class PlayerManager : MonoBehaviour {
         anim = GetComponent<Animator>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         serialMain = GameObject.Find("GameManager").GetComponent<SerialMain>();
+
+        buf[0] = 4;
+        serialMain.Write(buf);
     }
 	
 	void Update () {
@@ -58,6 +62,7 @@ public class PlayerManager : MonoBehaviour {
             TurnLeft();
         }
         if (handLight.activeInHierarchy) {
+            
             lighttime += Time.deltaTime;
             if (lighttime > MaxLightTime)
                 HandLight();
@@ -65,15 +70,12 @@ public class PlayerManager : MonoBehaviour {
         SendValue = Mathf.CeilToInt(Map(Mathf.Clamp(MaxLightTime - lighttime, 0, MaxLightTime), MaxLightTime, 0, 4, 0));
         if(SendValue != old_SendValue) {
 
-            Debug.Log("Old:" + old_SendValue + "New" + SendValue);
+            Debug.Log("Old:" + old_SendValue + " New" + SendValue);
             buf[0] = (byte)SendValue;
             serialMain.Write(buf);
             old_SendValue = SendValue;
         }
 	}
-    private void FixedUpdate() {
-        //Scheduler.ThreadPool.Schedule(() => serialMain.Write(buf));
-    }
     public void Run() {
         anim.SetBool("Run", true);
         transform.Translate(Vector3.forward * Time.deltaTime * speed);  
@@ -89,8 +91,10 @@ public class PlayerManager : MonoBehaviour {
     public void HandLight() {
         if (handLight.activeInHierarchy || lighttime > MaxLightTime) {
             handLight.SetActive(false);
+            yazirusi.SetActive(false);
         } else {
             handLight.SetActive(true);
+            yazirusi.SetActive(true);
         }
     }
 

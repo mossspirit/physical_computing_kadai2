@@ -2555,6 +2555,7 @@ MonoBehaviour:
   handLight: {fileID: 881083153}
   speed: 2
   MaxLightTime: 30
+  yazirusi: {fileID: 0}
 --- !u!54 &669795013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6828,6 +6829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e6b0d9ae1c00d4d942a7bb731d9b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portName: COM6
+  portName: COM4
   baurate: 9600
   playerManager: {fileID: 669795012}

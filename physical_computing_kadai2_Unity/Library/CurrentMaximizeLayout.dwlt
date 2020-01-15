@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 442}
-  m_MaxSize: {x: 22012, y: 10021}
+  m_MinSize: {x: 913, y: 421}
+  m_MaxSize: {x: 22008, y: 10021}
   vertical: 0
-  controlID: 7485
+  controlID: 1397
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,10 +125,10 @@ MonoBehaviour:
     y: 0
     width: 908
     height: 947
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 7457
+  controlID: 1398
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -181,14 +181,14 @@ MonoBehaviour:
     height: 465
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1172.1195047510746
+  lastFramingTime: 2811.2253849161207
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 13.725178, y: 0.0000038146973, z: -0.0000076293945}
+    m_Target: {x: 1.1304566, y: 3.1944942, z: 7.4150486}
     speed: 2
-    m_Value: {x: 13.725178, y: 0.0000038146973, z: -0.0000076293945}
+    m_Value: {x: 1.1304566, y: 3.1944942, z: 7.4150486}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -216,13 +216,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.24915569, y: -0.12019586, z: 0.031179776, w: -0.96046984}
+    m_Target: {x: -0.20024803, y: 0.672925, z: 0.19691366, w: 0.68432283}
     speed: 2
-    m_Value: {x: -0.2491557, y: -0.12019586, z: 0.031179776, w: -0.9604699}
+    m_Value: {x: -0.20024803, y: 0.672925, z: 0.19691366, w: 0.68432283}
   m_Size:
-    m_Target: 21.175533
+    m_Target: 2.4203827
     speed: 2
-    m_Value: 21.175533
+    m_Value: 2.4203827
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -336,9 +336,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 384afdff
-    m_LastClickedID: -177608
-    m_ExpandedIDs: 305efeff085ffeffcc60feffd660feff3264feffa698feff9cf9ffffe2fbffff000000006e3b00005e3c0000503d00004e3e0000c63e0000d87e0000
+    m_SelectedIDs: 4e480000
+    m_LastClickedID: 18510
+    m_ExpandedIDs: ac51ffffe2fbffff00000000923400008c37000014380000fe470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -428,14 +428,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\mosss\OneDrive\Document\GitHub\physical_computing_kadai2\physical_computing_kadai2_Unity
+  m_LastProjectPath: D:\Github\physical_computing_kadai2\physical_computing_kadai2_Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 78310000
     m_LastClickedID: 12664
-    m_ExpandedIDs: ffffffff00000000a02c0000ba2c0000ae2e0000d23200005c330000
+    m_ExpandedIDs: ffffffff00000000a02c0000ba2c0000ae2e0000da32000064330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -461,9 +461,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 384afdff
+    m_SelectedIDs: 4e480000
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000a02c0000ba2c0000ae2e0000d23200005c330000
+    m_ExpandedIDs: ffffffff00000000a02c0000ba2c0000ae2e0000da32000064330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,8 +488,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 384afdff
-    m_LastClickedInstanceID: -177608
+    m_SelectedInstanceIDs: 4e480000
+    m_LastClickedInstanceID: 18510
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:

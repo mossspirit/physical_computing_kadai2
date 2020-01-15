@@ -21,6 +21,7 @@ public class SerialMain : MonoBehaviour {
         try {
             this.serial.Open();
             Scheduler.ThreadPool.Schedule(() => ReadData()).AddTo(this);
+            
         } catch (Exception e) {
             Debug.Log("can not open serial port");
         }
